@@ -21,19 +21,19 @@
 |purpose_id            |integer |null: false |
 |self_pr               |text    |null: false |
 
-- has_many :message
-- has_many :like
+- has_many :messages
+- has_many :likes
 
 ## likes テーブル
 
-|Column             |Type       |Options     |
-|-------------------|-----------|------------|
+|Column             |Type       |Options        |
+|-------------------|-----------|---------------|
 |from_user_id       |references |null: false, foreign_key: true |
 |to_user_id         |references |null: false, foreign_key: true |
-|matching           |boolean    |            |
+|matching           |boolean    |null: false, default: false |
 
 - belongs_to :user
-- has_many :message
+- has_many :messages
 
 ## messages テーブル
 |Column             |Type       |Options  |

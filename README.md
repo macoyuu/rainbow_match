@@ -48,12 +48,12 @@
 
 ### Association
 - user
-   - has_many :like
-   - has_many :message
+   - has_many :likes
+   - has_many :messages
 
 - like
    - belongs_to :user
-   - has_many :message
+   - has_many :messages
 
 - message
    - belongs_to :user

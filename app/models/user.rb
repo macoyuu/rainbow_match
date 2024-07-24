@@ -5,7 +5,7 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
   belongs_to :gender_identity
-  belongs_to :sexual_orientation
+  belongs_to :sexual_orientation_1
   belongs_to :body_type
   belongs_to :purpose
   has_one_attached :image

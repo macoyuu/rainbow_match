@@ -3,23 +3,29 @@
 
 ## users テーブル
 
-|Column                |Type    |Options     |
-|----------------------|--------|------------|
-|nickname              |string  |null: false |
-|email                 |string  |null: false, unique:true |
-|encrypted_password    |string  |null: false |
-|family_name           |string  |null: false |
-|last_name             |string  |null: false |
-|family_name_kana      |string  |null: false |
-|last_name_kana        |string  |null: false |
-|birth_date            |date    |null: false |
-|prefecture_id         |integer |null: false |
-|gender_identity_id    |integer |null: false |
-|sexual_orientation_id |integer |null: false |
-|height                |integer |null: false |
-|body_type_id          |integer |null: false |
-|purpose_id            |integer |null: false |
-|self_pr               |text    |null: false |
+|Column                  |Type    |Options     |
+|------------------------|--------|------------|
+|nickname                |string  |null: false |
+|email                   |string  |null: false, unique:true |
+|encrypted_password      |string  |null: false |
+|family_name             |string  |null: false |
+|last_name               |string  |null: false |
+|family_name_kana        |string  |null: false |
+|last_name_kana          |string  |null: false |
+|birth_date              |date    |null: false |
+|prefecture_id           |integer |null: false |
+|gender_identity_id      |integer |null: false |
+|sexual_orientation_1_id |integer |null: false |
+|sexual_orientation_2_id |integer |null: false |
+|sexual_orientation_3_id |integer |null: false |
+|sexual_orientation_4_id |integer |null: false |
+|sexual_orientation_5_id |integer |null: false |
+|sexual_orientation_6_id |integer |null: false |
+|sexual_orientation_7_id |integer |null: false |
+|height                  |integer |null: false |
+|body_type_id            |integer |null: false |
+|purpose_id              |integer |null: false |
+|self_pr                 |text    |null: false |
 
 - has_many :messages
 - has_many :likes

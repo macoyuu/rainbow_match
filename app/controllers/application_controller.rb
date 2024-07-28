@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
     before_action :basic_auth
     before_action :configure_permitted_parameters, if: :devise_controller?
   
+    def set_current_user
+      @current_user = User.find_by(id: session[:user_id])
+    end
+
     private
   
     def basic_auth

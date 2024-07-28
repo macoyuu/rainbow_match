@@ -6,6 +6,12 @@ class User < ApplicationRecord
   belongs_to :prefecture
   belongs_to :gender_identity
   belongs_to :sexual_orientation_1
+  belongs_to :sexual_orientation_2
+  belongs_to :sexual_orientation_3
+  belongs_to :sexual_orientation_4
+  belongs_to :sexual_orientation_5
+  belongs_to :sexual_orientation_6
+  belongs_to :sexual_orientation_7
   belongs_to :body_type
   belongs_to :purpose
   has_one_attached :image

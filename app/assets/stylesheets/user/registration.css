@@ -159,3 +159,8 @@
   text-align: right;
   cursor: pointer;
 }
+
+.rainbow_match {
+  width: 200px;  
+  height: 200px;  
+}

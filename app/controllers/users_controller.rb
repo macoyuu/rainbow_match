@@ -1,14 +1,42 @@
 class UsersController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
   
 def index
   @users = User.all
 end
 
 def show
-  @user = User.find(params[:id])
+end
+
+def edit
+end
+
+def update
+  if @user.update(user_params)
+    redirect_to user_path
+  else
+    render :edit, status: :unprocessable_entity
+  end
+end
+
+def destroy
+  @user.destroy
+  redirect_to root_path
 end
 
 private
+
+def set_item
+  @user = User.find(params[:id])
+end
+
+def ensure_correct_user
+  if @user.id != current_user.id
+    redirect_to root_path
+  end
+end
+
 def user_params
   params.require(:user).permit(:nickname, :prefecture_id, :gender_identity_id, :sexual_orientation_1_id, 
   :sexual_orientation_2_id,:sexual_orientation_3_id,:sexual_orientation_4_id,
